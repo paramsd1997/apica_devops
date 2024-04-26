@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parmeshwar
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: parmeshwar
+  template:
+    metadata:
+      labels:
+        app: parmeshwar
+    spec:
+      containers:
+      - name: react-todo-list
+        image: param036/apicadevops
+        ports:
+        - containerPort: 80
